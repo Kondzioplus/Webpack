@@ -1,15 +1,15 @@
 {
     "presets": [
-        ["env", {
+        ["@babel/preset-env", {
             "debug": true,
-            "useBuiltIns": true,
+            "useBuiltIns": "entry",
             "targets": {
                 "browsers": ["ie >= 11"]
             }
         }]
     ],
     "plugins": [
-        "transform-runtime",
-        "transform-class-properties"
+        "@babel/plugin-transform-runtime",
+        "@babel/plugin-transform-class-properties"
     ]
 }
