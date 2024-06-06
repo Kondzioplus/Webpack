@@ -3,10 +3,6 @@ label {
         user-select: none;
 }
 
-:-ms-input-placeholder {
-   color: red;
-}
-
 ::placeholder {
    color: red;
 }
