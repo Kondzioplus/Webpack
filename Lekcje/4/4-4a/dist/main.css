@@ -1,0 +1,16 @@
+body {
+  background: red;
+}
+
+.p-header {
+  padding-top: 220px;
+  background: url(images/pika.9a47cf44.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 200px 200px;
+  color: #fff;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map*/
