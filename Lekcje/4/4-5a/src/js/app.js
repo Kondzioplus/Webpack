@@ -1,9 +1,6 @@
-require('./../scss/main.scss');
-s
-require('bootstrap');
-
-
+import 'bootstrap';
+import "../scss/main.scss";
 
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
-})
+  })
