@@ -1,0 +1,1 @@
+import img from '../js/catan.jpg';
