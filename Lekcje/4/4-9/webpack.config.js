@@ -91,9 +91,22 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                "presets": [
+                    ["env", {
+                        "debug": true,
+                        "useBuiltIns": true,
+                        "targets": {
+                            "browsers": ["ie >= 11"]
+                        }
+                    }],
+                    "react"
+                ]
             }
         ]
     },
+    
 
     plugins: [
         new CleanPlugin('dist'),
