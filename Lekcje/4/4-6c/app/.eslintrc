@@ -1,0 +1,4 @@
+{
+    "extends": ["@babel/core", "@babel/preset-env"]
+  }
+  
