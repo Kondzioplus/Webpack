@@ -1,0 +1,2 @@
+require('../style/style.css');
+
