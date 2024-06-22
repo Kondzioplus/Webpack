@@ -1,2 +1,0 @@
-require('./../scss/main.scss');
-
