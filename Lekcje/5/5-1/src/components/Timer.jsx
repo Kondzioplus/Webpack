@@ -3,12 +3,12 @@ import * as styles from './Timer.scss';
 
 import CSSModules from 'react-css-modules';
 
-const Timer = (props) => (
+const Timer = () => (
     <section styleName="timer">
         <div styleName="board">
-            <span styleName="num">{props.h}</span>
-            <span styleName="num">{props.m}</span>
-            <span styleName="num">{props.s}</span>
+            <span styleName="num">13</span>
+            <span styleName="num">22</span>
+            <span styleName="num">21</span>
         </div>
         <div styleName="logo"></div>
     </section>

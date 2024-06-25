@@ -6,24 +6,22 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'production',
-  entry: [
-    'react-hot-loader/patch',
-    './src/index.js'],
+  entry: './src/index.js',
 
-  
+
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
-        
+
       },
       {
         test: /\.(scss|css)$/,
-        
+
         use: [
-          
+
           {
             loader: 'style-loader',
           },
@@ -35,7 +33,7 @@ module.exports = {
           },
           {
             loader:'sass-loader',
-            
+
           }
         ],
       },
@@ -45,35 +43,35 @@ module.exports = {
         generator: {
             filename: 'images/[name].[ext]'
         }
-        
+
 
 
       },
       {
         test: /\.(woff|woff2)$/,
-        
+
           type: 'asset/resource',
           generator: {
           filename: './fonts/[name][ext]'
 } 
-        
+
       },
-      
+
      {
       test: /\.html$/,
       use: [
-      
+
           {
               loader: 'html-loader',
-              
+
           }
       ]
   },
-  
+
     ]
   },
   plugins: [
-   
+
     new HtmlWebpackPlugin ({
       template: './src/index.html',
       filename: 'index.html',
@@ -87,7 +85,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, './dist'),
-    
+
   },
   devServer: {
     static: path.resolve(__dirname, './dist'),
