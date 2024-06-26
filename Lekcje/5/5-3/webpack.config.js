@@ -5,6 +5,7 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 
 module.exports = {
+  
   mode: 'production',
   entry: './src/index.js',
   performance: {
