@@ -112,7 +112,7 @@ module.exports = {
     new FaviconsWebpackPlugin('./favicon.ico'),
     
     
-     //new webpack.HotModuleReplacementPlugin(),
+     new webpack.HotModuleReplacementPlugin(),
     /* new BrowserSyncPlugin({
       host: 'localhost',
       port: 9100,
