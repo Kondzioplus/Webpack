@@ -6,7 +6,7 @@ const config = {
     mode: 'development',
     devtool: 'inline-source-map',
     entry: [
-   // 'react-hot-loader/path',
+    //'react-hot-loader/path',
     './src/index.js',
     ],
 

@@ -2,7 +2,7 @@ import React from 'react';
 import Timer from './Timer';
 import * as styles from './App.scss';
 import CSSModules from 'react-css-modules';
-import { hot } from 'react-hot-loader/root'
+import { hot } from 'react-hot-loader/root';
 
 
 

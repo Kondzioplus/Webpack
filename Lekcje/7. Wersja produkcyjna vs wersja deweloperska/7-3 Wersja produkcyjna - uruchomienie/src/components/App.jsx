@@ -1,9 +1,8 @@
 import React from 'react';
-
 import Timer from './Timer';
 import * as styles from './App.scss';
-
 import CSSModules from 'react-css-modules';
+import { hot } from 'react-hot-loader/root'
 
 class App extends React.Component{
     state = {
@@ -21,7 +20,7 @@ class App extends React.Component{
         }, 1000)
     }
     
-    componentWillMount() {
+    UNSAFE_() {
         clearInterval(this.id);
     }
 
@@ -47,4 +46,4 @@ class App extends React.Component{
     }
 } 
 
-export default CSSModules(App, styles);
+export default hot(CSSModules(App, styles));

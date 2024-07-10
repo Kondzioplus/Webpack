@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 //const { plugins } = require('../webpack.config');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin'); 
 const webpack = require('webpack');
+const { hot } = require('react-hot-loader');
 
 module.exports.loadJS = ({
     test = /\.(js|jsx)$/,

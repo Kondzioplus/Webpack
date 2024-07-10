@@ -10,7 +10,7 @@
     "prebuild": "npm run clean && npm run copy",
     "build": "webpack --env prod",
     "preserv": "npm run build",
-    "serv": "rimraf dist http-server dist -p 9200  -g"
+    "serv": "rimraf dist http-server dist 9200  -g"
   },
   "author": "",
   "license": "ISC",

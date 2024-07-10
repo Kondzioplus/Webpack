@@ -10,7 +10,7 @@
     "prebuild": "npm run clean && npm run copy",
     "build": "webpack --env prod",
     "preserv": "npm run build",
-    "serv": "rimraf dist http-server dist -p 9200  -g"
+    "serv": "rimraf dist http-server dist 9200  -g"
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +22,7 @@
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.24.7",
     "@babel/preset-react": "^7.24.7",
+    "@hot-loader/react-dom": "^17.0.2",
     "babel-loader": "^9.1.3",
     "browser-sync": "^3.0.2",
     "browser-sync-webpack-plugin": "^2.3.0",

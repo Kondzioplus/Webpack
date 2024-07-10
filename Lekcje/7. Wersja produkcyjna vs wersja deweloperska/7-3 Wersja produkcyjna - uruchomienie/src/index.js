@@ -1,12 +1,14 @@
 import './main.scss';
-
+import { createRoot } from 'react-dom/client';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import App from './components/App';
 
+const container = document.getElementById('app');
+const root = createRoot(container);
+
 const render = (Comp) => {
-  ReactDOM.render(
+  root.render(
     <AppContainer>
     <Comp />
     </AppContainer>,
