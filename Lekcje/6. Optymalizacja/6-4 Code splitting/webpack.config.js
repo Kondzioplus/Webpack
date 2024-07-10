@@ -1,16 +1,25 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin'); 
+// const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 
 module.exports = {
+  
   mode: 'development',
-  entry: [
-    'react-hot-loader/patch',
-    './src/index.js'],
+  entry: {
+    app: './src/index.js',
+    vendor: ['react', 'react-dom','react-css-modules'],
+  },
   performance: {
     hints: false,
+  },
+  optimization: {
+    splitChunks: {
+      // include all types of chunks
+      chunks: 'all',
+    },
   },
   devServer: {
         port: 8080,
@@ -25,8 +34,14 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
+        include: /src/,
         use: ['babel-loader']
         
+      },
+      {
+        test: /\.(js|jsx)$/,
+        use: 'react-hot-loader/webpack',
+        include: /node_modules/
       },
       {
         test: /\.(scss|css)$/,
@@ -49,11 +64,13 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpe?g|gif|jpg)$/i,
         type: 'asset/resource',
         generator: {
             filename: 'images/[name].[ext]'
-        }
+        },
+       
+        
         
 
 
@@ -82,20 +99,33 @@ module.exports = {
     ]
   },
   plugins: [
-   
+    
     new HtmlWebpackPlugin ({
       template: './src/index.html',
       filename: 'index.html',
     }),
     new webpack.LoaderOptionsPlugin,
-    new webpack.HotModuleReplacementPlugin(),
-   
-  ],
+    new webpack.optimize.SplitChunksPlugin({
+      name:'vendor',
+     
+    }),
+    new FaviconsWebpackPlugin('./favicon.ico'),
+    
+    
+     //new webpack.HotModuleReplacementPlugin(),
+    /* new BrowserSyncPlugin({
+      host: 'localhost',
+      port: 9100,
+      proxy: 'http://localhost:8080',
+  }, {
+      reload: false,
+  }) */
+  ], 
   resolve: {
     extensions: ['.*', '.js', '.jsx']
   },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].[chunkhash].js',
     path: path.resolve(__dirname, './dist'),
     
   },

@@ -6,7 +6,7 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
   
-  mode: 'production',
+  mode: 'development',
   entry: [
     'react-hot-loader/patch',
     './src/index.js'],
